@@ -1,0 +1,123 @@
+:root {
+  /*PRIMARY COLORS PALLET */
+
+  --DarkCyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --VeryDarkBlue: hsl(212, 21%, 14%);
+  --DarkGrayishBlue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+
+  /*FONTS AND WEIGHTS*/
+  --font__primary: "Fraunces", serif;
+  --font__secondary: "Montserrat", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Cream);
+  min-height: 100vh;
+  font-size: 62.5%;
+  font-family: var(--font__secondary);
+}
+.card {
+  background-color: var(--White);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  width: 92%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.image__wrapper {
+  background-image: url(./images/image-product-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  object-fit: contain;
+  min-height: 15rem;
+  overflow: hidden;
+}
+.bg--image {
+  display: none;
+}
+
+.card__body {
+  padding: 1.4rem;
+}
+.sub--title {
+  color: var(--DarkGrayishBlue);
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  margin-bottom: 1rem;
+}
+.page--title {
+  color: var(--VeryDarkBlue);
+  font-family: var(--font__primary);
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.page--description {
+  color: var(--DarkGrayishBlue);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+.price-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+.new__price {
+  color: var(--DarkCyan);
+  font-size: 2.1rem;
+  font-family: var(--font__primary);
+}
+.old__price {
+  color: var(--DarkGrayishBlue);
+  font-size: 0.82rem;
+  text-decoration: line-through;
+}
+.btn {
+  background-color: var(--DarkCyan);
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--White);
+  font-family: var(--font__secondary);
+  font-weight: 700;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.cart--ico {
+  padding-right: 0.5rem;
+}
+@media screen and (min-width: 760px) {
+  .card {
+    flex-direction: row;
+    justify-content: center;
+    max-width: 600px;
+  }
+  .image__wrapper {
+    background-image: url("./images/image-product-desktop.jpg");
+    min-height: 100%;
+    width: 160%;
+  }
+}
