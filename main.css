@@ -107,13 +107,18 @@ body {
   display: flex;
   justify-content: center;
 }
+.btn:hover {
+  filter: brightness(80%);
+  transition: ease 300ms;
+  cursor: pointer;
+}
 .cart--ico {
   padding-right: 0.5rem;
 }
 @media screen and (min-width: 800px) {
   .card {
     flex-direction: row;
-    min-height: 29rem;
+    min-height: 28rem;
     max-width: 600px;
   }
   .image__wrapper {
